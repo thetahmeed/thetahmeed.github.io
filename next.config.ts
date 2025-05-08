@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',  // Enable static exports
-  basePath: '', // Remove the basePath since we're using a custom domain
+  basePath: '/thetahmeed.github.io',
   images: {
     unoptimized: true, // Required for static export
   },
