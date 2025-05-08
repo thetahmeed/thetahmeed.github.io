@@ -1,0 +1,100 @@
+{
+    "skills": [
+        {
+            "category": "Mobile Development",
+            "items": [
+                "Flutter",
+                "Dart",
+                "Android",
+                "iOS"
+            ]
+        },
+        {
+            "category": "State Management",
+            "items": [
+                "Provider",
+                "BLoC",
+                "GetX",
+                "Riverpod"
+            ]
+        },
+        {
+            "category": "Backend Integration",
+            "items": [
+                "Firebase",
+                "REST APIs",
+                "GraphQL",
+                "WebSocket"
+            ]
+        },
+        {
+            "category": "Tools & Technologies",
+            "items": [
+                "Git",
+                "VS Code",
+                "Android Studio",
+                "Xcode"
+            ]
+        }
+    ],
+    "experience": [
+        {
+            "title": "Senior Flutter Developer",
+            "company": "Tech Company",
+            "period": "2022 - Present",
+            "description": "Leading mobile app development team, implementing complex features, and mentoring junior developers."
+        },
+        {
+            "title": "Flutter Developer",
+            "company": "Startup Inc",
+            "period": "2020 - 2022",
+            "description": "Developed and maintained multiple Flutter applications, implemented CI/CD pipelines, and optimized app performance."
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor of Science in Computer Science",
+            "institution": "University Name",
+            "period": "2016 - 2020",
+            "description": "Focused on software development and mobile application programming."
+        }
+    ],
+    "clients": [
+        {
+            "name": "Client A",
+            "project": "E-commerce App",
+            "description": "Developed a full-featured e-commerce application with real-time inventory management."
+        },
+        {
+            "name": "Client B",
+            "project": "Fitness Tracker",
+            "description": "Created a comprehensive fitness tracking application with social features."
+        }
+    ],
+    "contributions": [
+        {
+            "title": "Flutter Package",
+            "description": "Created and maintained a popular Flutter package for state management.",
+            "link": "https://github.com/yourusername/package"
+        },
+        {
+            "title": "Open Source Contributions",
+            "description": "Contributed to various Flutter and Dart open-source projects.",
+            "link": "https://github.com/yourusername"
+        }
+    ],
+    "reviews": [
+        {
+            "name": "John Doe",
+            "position": "CTO, Tech Company",
+            "content": "Tahmeedul is an exceptional Flutter developer who consistently delivers high-quality work. His attention to detail and problem-solving skills are outstanding.",
+            "rating": 5
+        },
+        {
+            "name": "Jane Smith",
+            "position": "Product Manager, Startup Inc",
+            "content": "Working with Tahmeedul was a pleasure. He not only delivered the project on time but also provided valuable insights that improved the final product.",
+            "rating": 5
+        }
+    ]
+}

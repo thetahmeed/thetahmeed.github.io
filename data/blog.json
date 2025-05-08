@@ -1,0 +1,70 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "Getting Started with Flutter",
+            "date": "2024-03-15",
+            "image": "https://picsum.photos/800/400",
+            "excerpt": "Learn the basics of Flutter development and how to create your first mobile application.",
+            "content": "Flutter is an open-source UI software development kit created by Google. It is used to develop applications for Android, iOS, Linux, Mac, Windows, Google Fuchsia, and the web from a single codebase...",
+            "tags": [
+                "Flutter",
+                "Mobile Development",
+                "Tutorial"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "State Management in Flutter",
+            "date": "2024-03-10",
+            "image": "https://picsum.photos/800/400",
+            "excerpt": "A comprehensive guide to different state management solutions in Flutter.",
+            "content": "State management is a crucial aspect of Flutter development. In this post, we'll explore different approaches to managing state in your Flutter applications...",
+            "tags": [
+                "Flutter",
+                "State Management",
+                "BLoC",
+                "Provider"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Flutter Performance Tips",
+            "date": "2024-03-05",
+            "image": "https://picsum.photos/800/400",
+            "excerpt": "Learn how to optimize your Flutter applications for better performance.",
+            "content": "Performance optimization is essential for creating smooth and responsive Flutter applications. Here are some tips to improve your app's performance...",
+            "tags": [
+                "Flutter",
+                "Performance",
+                "Optimization"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Building Beautiful UIs with Flutter",
+            "date": "2024-02-28",
+            "image": "https://picsum.photos/800/400",
+            "excerpt": "Tips and tricks for creating stunning user interfaces in Flutter.",
+            "content": "Creating beautiful and responsive user interfaces is one of Flutter's strengths. Let's explore how to create visually appealing UIs...",
+            "tags": [
+                "Flutter",
+                "UI Design",
+                "Material Design"
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Flutter Testing Strategies",
+            "date": "2024-02-20",
+            "image": "https://picsum.photos/800/400",
+            "excerpt": "A guide to implementing effective testing strategies in Flutter applications.",
+            "content": "Testing is a crucial part of the development process. Learn how to implement unit tests, widget tests, and integration tests in your Flutter applications...",
+            "tags": [
+                "Flutter",
+                "Testing",
+                "Quality Assurance"
+            ]
+        }
+    ]
+}
