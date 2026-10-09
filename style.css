@@ -121,16 +121,6 @@ button {
     border: 0;
 }
 
-.scroll-progress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent), var(--accent-2));
-    width: 0;
-    z-index: 999;
-}
-
 .site-header {
     position: sticky;
     top: 0;

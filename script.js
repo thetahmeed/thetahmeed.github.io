@@ -5,7 +5,6 @@ const yearEl = document.getElementById("year");
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
 const themeToggle = document.querySelector(".theme-toggle");
-const scrollProgress = document.querySelector(".scroll-progress");
 const backToTop = document.querySelector(".back-to-top");
 const cursor = document.querySelector(".custom-cursor");
 
@@ -83,22 +82,13 @@ const initTyping = () => {
   tick();
 };
 
-const initScrollProgress = () => {
-  if (!scrollProgress) return;
-  const update = () => {
-    const height = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = height > 0 ? (window.scrollY / height) * 100 : 0;
-    scrollProgress.style.width = `${progress}%`;
-    if (backToTop) {
-      backToTop.classList.toggle("visible", window.scrollY > 500);
-    }
-  };
-  update();
-  window.addEventListener("scroll", update);
-};
-
 const initBackToTop = () => {
   if (!backToTop) return;
+  const updateVisibility = () => {
+    backToTop.classList.toggle("visible", window.scrollY > 500);
+  };
+  updateVisibility();
+  window.addEventListener("scroll", updateVisibility);
   backToTop.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
@@ -203,7 +193,6 @@ initLoader();
 initNavigation();
 initRotatingText();
 initTyping();
-initScrollProgress();
 initBackToTop();
 initReveal();
 initSkillBars();
