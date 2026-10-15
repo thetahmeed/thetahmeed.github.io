@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Tahmeedul Islam | Software Engineer, Flutter Developer, AI Researcher
-    </title>
+    <title>Under maintenance | Tahmeedul Islam</title>
     <meta
       name="description"
       content="Tahmeedul Islam is a software engineer, Flutter developer, mobile app developer, AI enthusiast, researcher, co-founder & CTO, and open source contributor. Known as Tahmeed and also known as Tahmeedul."
@@ -226,6 +224,52 @@
     </script>
   </head>
   <body>
+    <div
+      class="maintenance"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="maintenance-title"
+    >
+      <div class="maintenance-card">
+        <p class="maintenance-kicker">Tahmeedul Islam</p>
+        <h1 id="maintenance-title">Site under maintenance</h1>
+        <p class="maintenance-copy">
+          This site is being updated and will be back tonight at 11:59 PM.
+        </p>
+        <div
+          class="maintenance-timer"
+          role="timer"
+          aria-live="polite"
+          aria-atomic="true"
+          aria-label="Time remaining until the site is back"
+        >
+          <div>
+            <span id="maintenance-hours">00</span>
+            <small>Hours</small>
+          </div>
+          <div>
+            <span id="maintenance-minutes">00</span>
+            <small>Minutes</small>
+          </div>
+          <div>
+            <span id="maintenance-seconds">00</span>
+            <small>Seconds</small>
+          </div>
+        </div>
+        <p class="maintenance-until" id="maintenance-note">
+          Countdown to 11:59 PM, 15 October 2026
+        </p>
+        <div class="maintenance-links">
+          <a
+            href="https://github.com/thetahmeed"
+            target="_blank"
+            rel="noreferrer"
+            >github.com/thetahmeed</a
+          >
+          <a href="mailto:mail@tahmeedul.com">mail@tahmeedul.com</a>
+        </div>
+      </div>
+    </div>
     <a class="skip-link" href="#main">Skip to content</a>
     <div
       class="loader"
@@ -1039,5 +1083,38 @@
 
     <button class="back-to-top" aria-label="Back to top">^</button>
     <script src="script.js"></script>
+    <script>
+      (function () {
+        var target = new Date("2026-10-15T23:59:00+06:00").getTime();
+        var hoursEl = document.getElementById("maintenance-hours");
+        var minutesEl = document.getElementById("maintenance-minutes");
+        var secondsEl = document.getElementById("maintenance-seconds");
+        var noteEl = document.getElementById("maintenance-note");
+        if (!hoursEl || !minutesEl || !secondsEl) return;
+
+        var pad = function (value) {
+          return String(value).padStart(2, "0");
+        };
+
+        var tick = function () {
+          var remaining = target - Date.now();
+          if (remaining <= 0) {
+            hoursEl.textContent = "00";
+            minutesEl.textContent = "00";
+            secondsEl.textContent = "00";
+            if (noteEl) noteEl.textContent = "Maintenance window has ended.";
+            return;
+          }
+
+          var totalSeconds = Math.floor(remaining / 1000);
+          hoursEl.textContent = pad(Math.floor(totalSeconds / 3600));
+          minutesEl.textContent = pad(Math.floor((totalSeconds % 3600) / 60));
+          secondsEl.textContent = pad(totalSeconds % 60);
+        };
+
+        tick();
+        setInterval(tick, 1000);
+      })();
+    </script>
   </body>
 </html>
