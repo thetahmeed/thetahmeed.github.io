@@ -792,6 +792,129 @@ textarea {
     }
 }
 
+html:has(.maintenance),
+body:has(.maintenance) {
+    overflow: hidden;
+    opacity: 1;
+}
+
+body:has(.maintenance) .loader,
+body:has(.maintenance) .custom-cursor,
+body:has(.maintenance) .scroll-progress {
+    display: none;
+}
+
+.maintenance {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    overflow: auto;
+    background:
+        radial-gradient(circle at top, rgba(79, 209, 197, 0.14), transparent 55%),
+        radial-gradient(circle at 80% 20%, rgba(159, 122, 234, 0.16), transparent 45%),
+        var(--bg);
+}
+
+.maintenance-card {
+    width: min(640px, 100%);
+    text-align: center;
+    padding: clamp(32px, 6vw, 56px) clamp(20px, 5vw, 40px);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+    background: var(--bg-glass);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(16px);
+}
+
+.maintenance-kicker {
+    font-family: var(--font-mono);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    color: var(--accent);
+    margin-bottom: 16px;
+}
+
+.maintenance h1 {
+    font-size: clamp(2.1rem, 5vw, 3.4rem);
+    line-height: 1.1;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.maintenance-copy {
+    color: var(--muted);
+    max-width: 42ch;
+    margin: 0 auto 32px;
+}
+
+.maintenance-timer {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.maintenance-timer div {
+    min-width: 88px;
+    padding: 16px 12px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+html[data-theme="light"] .maintenance-timer div {
+    background: rgba(16, 19, 26, 0.03);
+}
+
+.maintenance-timer span {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.04em;
+}
+
+.maintenance-timer small {
+    display: block;
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.maintenance-until {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+}
+
+.maintenance-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 20px;
+}
+
+.maintenance-links a {
+    font-family: var(--font-mono);
+    font-size: 0.92rem;
+    color: var(--accent);
+}
+
+@media (max-width: 480px) {
+    .maintenance-timer div {
+        min-width: 0;
+        flex: 1;
+        padding: 14px 8px;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
