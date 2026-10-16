@@ -3054,8 +3054,8 @@
               ></a>
               <a
                 class="btn btn--ghost magnetic"
-                href="./Tahmeedul_Islam_CV.pdf"
-                download
+                href="./src/Tahmeedul_Islam_CV.pdf"
+                download="Tahmeedul_Islam_CV.pdf"
                 >Download CV
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 4v12M6 10l6 6 6-6M5 20h14" /></svg
@@ -3088,20 +3088,16 @@
           <div class="about__grid">
             <div class="about__photo" data-reveal>
               <div data-parallax="-0.06">
-                <!-- PHOTO PLACEHOLDER: replace the inner div's content with
-                   <img src="./me.jpg" alt="Portrait of Tahmeedul Islam" width="800" height="1000"> -->
                 <div class="photo-frame">
-                  <div
-                    class="photo-frame__inner"
-                    role="img"
-                    aria-label="Portrait placeholder for Tahmeedul Islam"
-                  >
-                    <span class="photo-frame__initials" aria-hidden="true"
-                      >TI</span
-                    >
-                    <span class="photo-frame__hint mono" aria-hidden="true"
-                      ><span>Your photo here</span><span>4 : 5</span></span
-                    >
+                  <div class="photo-frame__inner">
+                    <img
+                      src="./src/Photo-of-Tahmeedul-Islam.jpg"
+                      alt="Portrait of Tahmeedul Islam"
+                      width="800"
+                      height="1000"
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </div>
                 </div>
                 <div class="photo-badge" aria-hidden="true">
@@ -3119,8 +3115,8 @@
               <p class="about__bio" data-reveal>
                 Currently building enterprise applications for an insurance
                 company. Published IEEE researcher and open-source contributor —
-                two pub.dev packages, plus a contribution to the Flutter website
-                repo.
+                two pub.dev packages, plus documentation updates to the Flutter
+                website.
               </p>
               <ul
                 class="stats"
@@ -3164,7 +3160,7 @@
                 Software Engineer, Lovistro Limited (2025) · Software Engineer,
                 Guideasy Global Limited (2023 — 2024) · Jr. Software Engineer,
                 DigitalLab (2022 — 2023) · Intern, Foodeasy (2022). Full details
-                in my <a href="./Tahmeedul_Islam_CV.pdf">CV</a>.
+                in my <a href="./src/Tahmeedul_Islam_CV.pdf">CV</a>.
               </p></noscript
             >
           </div>
@@ -3180,8 +3176,8 @@
               Things I've <em>shipped</em>.
             </h2>
             <p class="section__lead">
-              Production apps on Google Play, the App Store and the web — plus
-              open-source Flutter packages on pub.dev.
+              Production apps on Google Play and the web — plus open-source
+              Flutter packages on pub.dev.
             </p>
           </header>
           <div class="projects" id="projects-grid">
@@ -3190,9 +3186,22 @@
                 Meghna Life Insurance Agent App (<a
                   href="https://play.google.com/store/apps/details?id=com.mli.mli_agent&amp;hl=en"
                   >Google Play</a
-                >) · <a href="https://max4card.com">Max4Card</a> · Lovistro
-                (Google Play) · Guideasy &amp; Guider (Google Play &amp; App
-                Store) ·
+                >) · <a href="https://max4card.com">Max4Card</a> ·
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.lovistro.app&amp;hl=en"
+                  >Lovistro</a
+                >
+                ·
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.guideasy.app&amp;hl=en"
+                  >Guideasy</a
+                >
+                &amp;
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.guideasy.guider"
+                  >Guider</a
+                >
+                ·
                 <a href="https://pub.dev/packages/number_translator"
                   >number_translator</a
                 >
@@ -3263,11 +3272,12 @@
                 >,
                 <a href="https://pub.dev/packages/image_loading_animation"
                   >image_loading_animation</a
-                >. Contributor to
-                <a href="https://github.com/flutter/website">flutter/website</a
-                >. Publication: “An Interpretable Lightweight
-                Squeeze-And-Excitation Block-Based Deep Learning Model for Lung
-                Disease Prediction”, IEEE ICCIT 2025 —
+                >. Updated
+                <a href="https://github.com/flutter/website">flutter/website</a>
+                docs for Build and release an Android app. Publication: “An
+                Interpretable Lightweight Squeeze-And-Excitation Block-Based
+                Deep Learning Model for Lung Disease Prediction”, IEEE ICCIT
+                2025 —
                 <a href="https://doi.org/10.1109/ICCIT68739.2025.11491217"
                   >DOI 10.1109/ICCIT68739.2025.11491217</a
                 >.
@@ -3290,8 +3300,8 @@
           <noscript
             ><p class="noscript-note">
               B.Sc. in CSE, City University (2021 — 2025), CGPA 3.70/4.00 · HSC
-              (Science), Sristy College of Tangail, GPA 4.42/5.00 · SSC
-              (Science), Magra Pals' Union High School, GPA 4.86/5.00.
+              2019 (Science), Sristy College of Tangail, GPA 4.42/5.00 · SSC
+              2017 (Science), Magra Pals' Union High School, GPA 4.86/5.00.
             </p></noscript
           >
         </div>
@@ -3358,15 +3368,19 @@
             >
           </div>
 
-          <!-- No backend: the form opens the visitor's mail client. Works without JS via the mailto action. -->
+          <!-- Formspree endpoint — works without JS via a normal POST. -->
           <form
             class="form glass"
             id="contact-form"
-            action="mailto:tahmeedul.com@gmail.com"
-            method="post"
-            enctype="text/plain"
+            action="https://formspree.io/f/xeqwnelo"
+            method="POST"
             data-reveal
           >
+            <input
+              type="hidden"
+              name="_subject"
+              value="Portfolio inquiry from tahmeedul.com"
+            />
             <div class="form__row">
               <div class="field">
                 <label for="f-name">Name</label>
@@ -3401,9 +3415,7 @@
               ></textarea>
             </div>
             <div class="form__foot">
-              <p class="form__note">
-                Opens in your email app — no data is stored.
-              </p>
+              <p class="form__note">I’ll get back to you as soon as I can.</p>
               <button type="submit" class="btn btn--primary magnetic">
                 Send message
                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -3544,7 +3556,7 @@
         name: "Tahmeedul Islam",
         email: "tahmeedul.com@gmail.com",
         phone: "+880 1700 547406",
-        cv: "./Tahmeedul_Islam_CV.pdf",
+        cv: "./src/Tahmeedul_Islam_CV.pdf",
         links: {
           website: "https://tahmeedul.com",
           linkedin: "https://linkedin.com/in/thetahmeed",
@@ -3554,7 +3566,7 @@
 
         stats: [
           { value: 3, suffix: "+", label: "Years of experience" },
-          { value: 4, suffix: "", label: "Production apps" },
+          { value: 10, suffix: "+", label: "Production apps" },
           { value: 1, suffix: "", label: "IEEE publication" },
           { value: 2, suffix: "", label: "pub.dev packages" },
         ],
@@ -3662,6 +3674,7 @@
             desc: "Digital goods e-commerce for game currencies, redeem codes and subscriptions.",
             tags: ["Next.js", "React", "Express.js", "MySQL"],
             link: { label: "max4card.com", href: "https://max4card.com" },
+            status: "Client project",
           },
           {
             title: "Lovistro",
@@ -3670,16 +3683,28 @@
             hue: -30,
             desc: "Matchmaking app with real-time chat and push notifications.",
             tags: ["Flutter", "Riverpod", "Firebase FCM", "WebSocket"],
-            status: "Live on Google Play",
+            link: {
+              label: "Google Play",
+              href: "https://play.google.com/store/apps/details?id=com.lovistro.app&hl=en",
+            },
           },
           {
             title: "Guideasy & Guider",
             year: "2024",
             type: "dual",
             hue: 70,
-            desc: "Dual-app travel platform built with Flutter, live on Google Play and the App Store.",
+            desc: "Dual-app travel platform built with Flutter, live on Google Play.",
             tags: ["Flutter", "GetX", "Firebase FCM", "Pusher"],
-            status: "Live on Google Play & App Store",
+            links: [
+              {
+                label: "Guideasy",
+                href: "https://play.google.com/store/apps/details?id=com.guideasy.app&hl=en",
+              },
+              {
+                label: "Guider",
+                href: "https://play.google.com/store/apps/details?id=com.guideasy.guider",
+              },
+            ],
           },
           {
             title: "Open-source Flutter packages",
@@ -3801,7 +3826,7 @@
             kind: "pub.dev package",
             name: "number_translator",
             period: "2024 — 2025",
-            desc: "Flutter package published on pub.dev.",
+            desc: "Dart package for converting numbers between different languages with ease.",
             href: "https://pub.dev/packages/number_translator",
             label: "View on pub.dev",
           },
@@ -3809,7 +3834,7 @@
             kind: "pub.dev package",
             name: "image_loading_animation",
             period: "2024 — 2025",
-            desc: "Flutter package published on pub.dev.",
+            desc: "A simple package that uses an image as a custom loading animation.",
             href: "https://pub.dev/packages/image_loading_animation",
             label: "View on pub.dev",
           },
@@ -3817,7 +3842,7 @@
             kind: "Contribution",
             name: "flutter/website",
             period: "Open source",
-            desc: "Contribution to the official Flutter website repository.",
+            desc: "Updated Flutter website documentation for Build and release an Android app.",
             href: "https://github.com/flutter/website",
             label: "View repository",
           },
@@ -3849,14 +3874,14 @@
           {
             degree: "Higher Secondary Certificate (Science)",
             school: "Sristy College of Tangail",
-            years: "HSC",
+            years: "2019",
             grade: "4.42",
             scale: "GPA / 5.00",
           },
           {
             degree: "Secondary School Certificate (Science)",
             school: "Magra Pals' Union High School",
-            years: "SSC",
+            years: "2017",
             grade: "4.86",
             scale: "GPA / 5.00",
           },
@@ -4031,8 +4056,8 @@
               foot = `<a class="arrow-link" href="${p.link.href}" target="_blank" rel="noopener"><span>${esc(p.link.label)}</span>${ICON.arrow}</a>`;
             if (p.status)
               foot += `<span class="project__status mono">${esc(p.status)}</span>`;
-            const clickable = p.link
-              ? ` data-href="${p.link.href}" data-cursor="view"`
+            const clickable = primary
+              ? ` data-href="${primary.href}" data-cursor="view"`
               : "";
             return `
       <div class="project-wrap" data-reveal>
@@ -4930,23 +4955,36 @@
       }
 
       /* =======================================================================
-     CONTACT FORM — mailto with subject/body (no backend)
+     CONTACT FORM — Formspree (AJAX when JS is available)
      ======================================================================= */
       function initContactForm() {
         const form = $("#contact-form");
         if (!form) return;
-        form.addEventListener("submit", (e) => {
+        const btn = form.querySelector('button[type="submit"]');
+        form.addEventListener("submit", async (e) => {
           e.preventDefault();
-          const fd = new FormData(form);
-          const name = String(fd.get("name") || "").trim(),
-            email = String(fd.get("email") || "").trim(),
-            msg = String(fd.get("message") || "").trim();
-          const subject = encodeURIComponent(
-            `Portfolio inquiry from ${name || "your website"}`,
-          );
-          const body = encodeURIComponent(`${msg}\n\n— ${name}\n${email}`);
-          window.location.href = `mailto:${DATA.email}?subject=${subject}&body=${body}`;
-          showToast("Opening your email app…");
+          if (btn) btn.disabled = true;
+          try {
+            const res = await fetch(form.action, {
+              method: "POST",
+              body: new FormData(form),
+              headers: { Accept: "application/json" },
+            });
+            if (res.ok) {
+              form.reset();
+              showToast("Message sent — thanks for reaching out");
+            } else {
+              const data = await res.json().catch(() => ({}));
+              const err =
+                (data.errors && data.errors.map((x) => x.message).join(", ")) ||
+                "Something went wrong. Please try again.";
+              showToast(err);
+            }
+          } catch (_) {
+            showToast("Couldn't send — check your connection and try again");
+          } finally {
+            if (btn) btn.disabled = false;
+          }
         });
       }
 
